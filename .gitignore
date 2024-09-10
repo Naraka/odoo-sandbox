@@ -1,4 +1,5 @@
-/venv
+venv/
 .env
 odoo_pg_pass
 config/odoo.conf
+__pycache__/
