@@ -1,0 +1,67 @@
+<odoo>
+    <data>
+        <!-- Define the tree view for Estate Property -->
+        <record id="property_tree" model="ir.ui.view">
+            <field name="name">Estate Property Tree View</field>
+            <field name="model">real_state.property</field>
+            <field name="arch" type="xml">
+                <tree string="Estate Property">
+                    <field name="name" string="Name"/>
+                    <field name="postcode" string="Postcode"/>
+                    <field name="description" string="Description"/>
+                    <field name="date_availability" string="Date Availability"/>
+                    <field name="expected_price" string="Expected Price"/>
+                    <field name="selling_price" string="Selling Price"/>
+                    <field name="bedrooms" string="Bedrooms"/>
+                    <field name="living_area" string="Living Area"/>
+                    <field name="garage" string="Garage"/>
+                    <field name="garden_orientation" string="Garden Orientation"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Define the form view for Estate Property -->
+        <record id="property_form" model="ir.ui.view">
+            <field name="name">Estate Property Form View</field>
+            <field name="model">real_state.property</field>
+            <field name="arch" type="xml">
+                <form string="Estate Property">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" string="Name"/>
+                                <field name="postcode" string="Postcode"/>
+                            </group>
+                            <group>
+                                <field name="description" string="Description"/>
+                                <field name="date_availability" string="Date Availability"/>
+                            </group>
+                            <group>
+                                <field name="expected_price" string="Expected Price"/>
+                                <field name="selling_price" string="Selling Price"/>
+                            </group>
+                            <group>
+                                <field name="bedrooms" string="Bedrooms"/>
+                                <field name="living_area" string="Living Area"/>
+                            </group>
+                            <group>
+                                <field name="garage" string="Garage"/>
+                                <field name="garden_orientation" string="Garden Orientation"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Define the action for Estate Property -->
+        <record id="action_estate_property" model="ir.actions.act_window">
+            <field name="name">Estate Property</field>
+            <field name="res_model">real_state.property</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Define the menu item for Estate Property -->
+        <menuitem id="menu_estate_property" name="Estate Properties" action="action_estate_property"/>
+    </data>
+</odoo>

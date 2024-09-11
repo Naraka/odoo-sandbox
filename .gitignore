@@ -3,3 +3,5 @@ venv/
 odoo_pg_pass
 config/odoo.conf
 __pycache__/
+start.sh
+odoo/
